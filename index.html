@@ -16,6 +16,11 @@
 				padding: 0 30px; 
 				
 			}
+			header{
+				background-color: #FBFBFB;
+				height: 100px;
+
+			}
 			a{
 				color: black;
 				text-decoration: none;
@@ -37,7 +42,7 @@
 				border: 1px solid rgb(252, 85, 124);
 				padding: 12px 40px 10px;
 				margin-left: 30px;
-				color: rgb(252, 85, 124);
+				color: #FBFBFB;
 				background-color: white;
 			}
 			#contact_cont{
@@ -46,13 +51,17 @@
 				justify-content: flex-end;
 				align-items: center;
 			}
+			.fixed-width{
+				width: 1230px;
+				margin: 0 auto 0;
+				padding:  30px; 
+			}
 		</style>
 	</head>
 
 	<body>
-		
-		<div id="layout"> 
-			<header> 
+		<header> 
+			<div class="fixed-width">
 				<a href ":">Томатный сок</a>
 				<a href ":">Апельсиновый сок</a>
 				<a href ":">Ананасовый сок</a> 
@@ -60,8 +69,9 @@
 					<span id="phonenum"> +7(937)-799-09-13</span>
 					<button id="callme"> Заказать звонок </button>
 				</div>
-			</header>
-		</div>
+			</div>  		
+		</header>
+		
 
 	</body>
 </html>

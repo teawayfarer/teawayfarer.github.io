@@ -3,11 +3,16 @@
 	<head>
 		<meta charset="UTF-8">
 		<title> Гюльали Сабиров пьет томатный сок </title>
-		<link rel="shortcut icon" href="icon.jpeg" type="image/jpeg" />
+		<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+		<script type="text/javascript" src="fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+		<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+		<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.4.css" media="screen">
 		<style type="text/css">
 			html, body
 			{
-				background-color: #e1d4e2;
+				background-color: #86c6ed;
 				padding: 0;
 				margin: 0;
 				font-family: : Arial; 
@@ -20,16 +25,17 @@
 				
 			}
 			header{
-				background-color: #c4e8eb;
+				 background: linear-gradient(to right bottom, #217bb4, #005e97);
 				height: 100px;
 
 			}
-			a{
+			.lnks{
 				color: black;
 				text-decoration: none;
 				margin-right: 30px;
 			}
 			a:hover{
+
 				border-bottom: 1px dotted rgb(52, 85, 124); 
 				color: rgb(252, 85, 124);
 			}
@@ -37,17 +43,21 @@
 				float:right;
 				font-weight: bold;
 				font-size: 24px;
+				color: #000;
 			}
-			#callme{
+			#face{
+				border-radius: 100px;
+			}
+			/*#callme{
 				float:right;
 				font-weight: bold;
 				font-size: 16px;
-				border: 1px solid #00aedd;
+				border: 1px solid #0070cf;
 				padding: 12px 40px 10px;
 				margin-left: 30px;
-				color:#00aedd;
-				background-color: #c4e8eb;
-			}
+				color:#0070cf;
+				background-color: #adebea;
+			} */
 			#contact_cont{
 				float: right;
 				display: flex;
@@ -61,22 +71,82 @@
 				padding: 0 30px; 
 				height: 100%;
 			}
+			.block{
+				color: #fff;
+				font-family: Courier New;
+				font-size: 40px;
+				 margin: 0;
+				 height:360px;
+				 width: 100%;
+				 background: radial-gradient(#6a97ce, #6671b2); 
+				 display: flex;
+ 				 align-items: center;
+  		         justify-content: center;
+  		         flex-direction: column;
+			}
+			.nextblock{
+				color: #fff;
+				font-family: Courier;
+				font-size: 20px;
+				 margin: 0;
+				 height:360px;
+				 width: 100%;
+				 background: radial-gradient(#217bb4, #005e97);  
+				 display: flex;
+ 				 align-items: center;
+  		         justify-content: center;
+  		         flex-direction: column;
+			}
+			#snow{
+				margin: 0;
+				color: #fff;
+				font-family: Courier;
+				font-size: 15px;
+			}
+			#danger{
+				margin: 0;
+				color: #fff;
+				font-family: Trebuchet;
+				font-size: 13px;
+				text-align: center;
+			}
 			nav{
 				height: 100%;
 				float: left;
 				display: flex;
 				align-items: center;
 			}
+			table {
+				font-family: Georgia;
+				margin-bottom: 44px;
+ 			    width: 100%;
+			    border-collapse: collapse;
+			}
+			th,td {
+			  vertical-align: middle;
+			  border: 2px solid #000;
+			  padding: 20px 30px;
+
+			}
+			thead, tfoot {
+			  text-align: left;
+			  background: linear-gradient(to right, #6671b2, #217bb4); 
+			  color: #adebea;
+			}
+			tbody tr:nth-child(even) {
+			  background: #A4E4FF;
+			  color: #0070cf;
+			}
+			tbody tr:nth-child(odd) {
+			  background: #FFD9FA;
+			  color: #95588D;
+			}
+
 		</style>
-		<script type="text/javascript" src="/js/jquery-3.3.1.min">
-		$(function(){
-					$(#'callme').click(function(){
-						alert('yeeeep');
-					})
-				}); 
-		</script>
 		<script type="text/javascript">
-				
+			$(document).ready(function() {
+   			$(".fancybox").fancybox();
+    		});
 		</script>   
 	</head>
 
@@ -84,17 +154,78 @@
 		<header> 
 			<div class="fixed-width">
 				<nav>
-					<a href="https://vk.com/teawayfarer">VK</a>
-					<a href="https://www.facebook.com/greenwayfarer">FB</a>
-					<a href="https://t.me/teawayfarer">TG</a> 
+					<a href="https://vk.com/teawayfarer" class="lnks" target="_blank";>
+						<img src="images/vk_icon.png" width="55" height="55">
+					</a>
+					<a href="https://t.me/teawayfarer" class="lnks" target="_blank";>
+						<img src="images/tg_icon.jpg" width="50" height="50">
+					</a>
+					<a href="https://www.facebook.com/greenwayfarer" class="lnks" target="_blank";>
+						<img src="images/fb_icon.png" width="69" height="69">
+					</a>
+					 
 				</nav>
 				<div id="contact_cont">
-					<span id="phonenum"> +7(937)-799-09-13</span>
-					<button id="callme" > Заказать звонок </button>
+					<span id="phonenum"> 
+						+7(937)-799-09-13   
+					</span>
+					<a class="fancybox" rel="group" href="images/bigface.png">
+						<img src="images/smallface.png" width="100" height="100" alt="" />
+					</a>
 				</div>
 			</div>  		
 		</header>
-		
+		<div class="block">
+			<h>I'm Gyul'ali!</h>
+			<div>
+				<p> a frontend-developer* </p>
+
+			</div>
+		</div>
+		<div class="nextblock">
+			<p id="snow">* a future frontend-developer!<p>
+			<ul>
+				<li> I studying in Samara University at Computer Science.</li>
+				<li> I have "ЕГЭ"'/"USE" 241 points.</li>
+				<li> I learn quickly and responsibly.</li>
+				<li> I'm a big fan of sci-fi, IT, design and English, so I really want to start working.</li>	
+			</ul>
+		</div>
+			<table>
+				<thead>
+				<tr>
+					<th scope="col"> Tehcnology</th>
+					<th scope="col"> Accessibility for me now or in the future </th>
+				</tr>
+				</thead>
+				<tr>
+					<td>HTML</td>
+					<td>+</td>
+				</tr>
+				<tr>
+					<td>CSS</td>
+					<td>+</td>
+				</tr>
+				<tr>
+					<td>JavaScript, JQuery</td>
+					<td>+</td>
+				</tr>
+				<tr>
+					<td>C++</td>
+					<td>++ :)</td>
+				</tr>
+				<tr>
+					<td>Any technology, if needed</td>
+					<td>+!</td>
+				</tr>
+				<tfoot>
+					<tr>
+						<th>Great desire and ability to learn!</th>
+						<th>+!</th>
+					</tr>
+				</tfoot>
+			</table>
+			<p id="danger">this is only the first training layout, if you are a real designer, keep calm please and don't try to use violence against anyone.<p>
 
 	</body>
 </html>
